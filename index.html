@@ -1,121 +1,481 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080808">
-  <title>OPERATION SORRY</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>OPERATION SORRY</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.her-world {
+  background: #F1EAFB;
+  color: #55446F;
+  margin: 65px -20px 0;
+  padding: 45px 20px;
+  border-radius: 4px;
+}
+
+.her-world .world-kicker {
+  color: #9879BD;
+  font: 10px monospace;
+  letter-spacing: .18em;
+}
+
+.her-world h2 {
+  color: #8063A8;
+  font: italic 42px Georgia, serif;
+  margin: 14px 0;
+}
+
+.her-world .world-intro {
+  color: #78678D;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.edit-card {
+  background: #fff;
+  border: 1px solid #E3D6F2;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 18px 0;
+  box-shadow: 0 5px 18px rgba(95, 65, 130, .07);
+}
+
+.edit-card h3 {
+  color: #8063A8;
+  font: 12px monospace;
+  letter-spacing: .12em;
+  margin: 5px 0 12px;
+}
+
+.edit-card video {
+  width: 100%;
+  display: block;
+  background: #17121D;
+  border-radius: 7px;
+  max-height: 520px;
+}
+
+.edit-note {
+  text-align: center;
+  color: #9278B2;
+  font: 10px monospace;
+  letter-spacing: .12em;
+  margin-top: 35px;
+}
+
+@media (max-width: 480px) {
+  .her-world {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 35px 15px;
+  }
+
+  .her-world h2 {
+    font-size: 36px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <div class="noise"></div>
+<div class="noise"></div>
 
-  <main class="page">
+<main class="page">
 
-    <header>
-      <div class="brand">
-        <span class="mark">OS</span>
-        <span>PRIVATE SCREENING</span>
-      </div>
-      <div class="status">
-        <i></i> CLASSIFIED · FOR GINNII
-      </div>
-    </header>
+<header>
+  <div class="brand">
+    <span class="mark">OS</span>
+    <span>PRIVATE SCREENING</span>
+  </div>
+  <div class="status">
+    <i></i> CLASSIFIED · FOR GINNII
+  </div>
+</header>
 
-    <section class="hero" id="hero">
-      <p class="kicker">A PERSONAL MESSAGE</p>
+<section class="hero" id="hero">
+  <p class="kicker">A PERSONAL MESSAGE</p>
+  <h1>OPERATION<br><em>SORRY.</em></h1>
+  <p class="tagline">MISSION: MAKE THINGS RIGHT.</p>
+  <p class="intro">One small film. One honest apology. No excuses.</p>
 
-      <h1>OPERATION<br><em>SORRY.</em></h1>
+  <button class="primary" id="enter">
+    ENTER THE MISSION <span>↗</span>
+  </button>
 
-      <p class="tagline">MISSION: MAKE THINGS RIGHT.</p>
-      <p class="intro">One small film. One honest apology. No excuses.</p>
+  <div class="index">
+    CASE FILE NO. 001 <span>•</span> PERSONAL
+  </div>
+</section>
 
-      <button class="primary" id="enter">
-        ENTER THE MISSION <span>↗</span>
-      </button>
+<section class="content hidden" id="content">
 
-      <div class="index">
-        CASE FILE NO. 001 <span>•</span> PERSONAL
-      </div>
-    </section>
+  <div class="section-head">
+    <span>01 / THE RECORDING</span>
+    <span>NOW PLAYING</span>
+  </div>
 
-    <section class="content hidden" id="content">
+  <div class="player loaded" id="player">
+    <video id="film" controls playsinline preload="metadata"
+      style="width:100%;height:auto;display:block;">
+      <source
+        src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/Snapchat-334425259-fixed.mp4"
+        type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
 
-      <div class="section-head">
-        <span>01 / THE RECORDING</span>
-        <span>NOW PLAYING</span>
-      </div>
+  <p class="hint">
+    YOUR VIDEO WILL PLAY HERE · UNDER 1 MINUTE
+  </p>
 
-      <div class="player loaded" id="player">
-        <video
-          id="film"
-          controls
-          playsinline
-          preload="metadata"
-          style="width:100%; height:auto; display:block;"
-        >
-          <source
-            src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/Snapchat-334425259-fixed.mp4"
-            type="video/mp4"
-          >
-          Your browser does not support video playback.
-        </video>
-      </div>
+  <div class="section-head message-head">
+    <span>02 / A MESSAGE FOR YOU</span>
+    <span>FROM ME</span>
+  </div>
 
-      <p class="hint">
-        YOUR VIDEO WILL PLAY HERE · UNDER 1 MINUTE
-      </p>
+  <article class="letter">
+    <p class="salute">Ginnii,</p>
 
-      <div class="section-head message-head">
-        <span>02 / A MESSAGE FOR YOU</span>
-        <span>FROM ME</span>
-      </div>
+    <p>
+      I know maine galti ki hai. Mere words galat the,
+      aur us waqt galti meri hi thi. Pata nahi maine
+      woh sab kyun kaha.
+    </p>
 
-      <article class="letter">
+    <p>
+      Mujhe ek baat samajh aa gayi hai ki har baar
+      har sach bolna zaroori nahi hota. Kabhi-kabhi
+      main bahut bold ho jaata hoon aur bina soche
+      kuch keh deta hoon, jo mujhe nahi karna chahiye.
+    </p>
 
-        <p class="salute">Ginnii,</p>
+    <p>
+      Main apni is aadat par dhyan dunga aur koshish
+      karunga ki aage se aisa dobara na ho.
+    </p>
 
-        <p>
-          I know maine galti ki hai. Mere words galat the,
-          aur us waqt galti meri hi thi. Pata nahi maine
-          woh sab kyun kaha.
-        </p>
+    <p>I genuinely mean it when I say I'm sorry.</p>
+    <p>Please mujhe maaf kar do. 🥺❤️‍🩹</p>
 
-        <p>
-          Mujhe ek baat samajh aa gayi hai ki har baar
-          har sach bolna zaroori nahi hota. Kabhi-kabhi
-          main bahut bold ho jaata hoon aur bina soche
-          kuch keh deta hoon, jo mujhe nahi karna chahiye.
-        </p>
+    <div class="signoff">— END OF MESSAGE —</div>
+  </article>
 
-        <p>
-          Main apni is aadat par dhyan dunga aur koshish
-          karunga ki aage se aisa dobara na ho.
-        </p>
+  <div class="closing">
+    <span>MISSION STATUS</span>
+    <strong>THE APOLOGY HAS BEEN DELIVERED.</strong>
+  </div>
 
-        <p>I genuinely mean it when I say I'm sorry.</p>
+  <!-- HER LITTLE WORLD -->
 
-        <p>Please mujhe maaf kar do. 🥺❤️‍🩹</p>
+  <section class="her-world">
 
-        <div class="signoff">— END OF MESSAGE —</div>
+    <p class="world-kicker">A LITTLE COLLECTION OF HER ART</p>
 
-      </article>
+    <h2>Her Little World ♡</h2>
 
-      <div class="closing">
-        <span>MISSION STATUS</span>
-        <strong>THE APOLOGY HAS BEEN DELIVERED.</strong>
-      </div>
+    <p class="world-intro">
+      A little space for her creativity, her edits
+      and the little moments captured in them.
+    </p>
 
-    </section>
+    <p class="world-kicker">03 / HER EDITS</p>
 
-    <footer>
-      <span>OPERATION SORRY © <span id="year"></span></span>
-      <span>MADE WITH SINCERITY.</span>
-    </footer>
+    <div class="edit-card">
+      <h3>EDIT 01</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_032028.mp4" type="video/mp4">
+      </video>
+    </div>
 
-  </main>
+    <div class="edit-card">
+      <h3>EDIT 02</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_032545.mp4" type="video/mp4">
+      </video>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="edit-card">
+      <h3>EDIT 03</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_032704.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="edit-card">
+      <h3>EDIT 04</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_035958.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="edit-card">
+      <h3>EDIT 05</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261006_143033.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <p class="edit-note">
+      MADE OF LITTLE MOMENTS & MEMORIES ♡
+    </p>
+
+  </section>
+
+</section>
+
+<footer>
+  <span>OPERATION SORRY © <span id="year"></span></span>
+  <span>MADE WITH SINCERITY.</span>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>OPERATION SORRY</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.her-world {
+  background: #F1EAFB;
+  color: #55446F;
+  margin: 65px -20px 0;
+  padding: 45px 20px;
+  border-radius: 4px;
+}
+
+.her-world .world-kicker {
+  color: #9879BD;
+  font: 10px monospace;
+  letter-spacing: .18em;
+}
+
+.her-world h2 {
+  color: #8063A8;
+  font: italic 42px Georgia, serif;
+  margin: 14px 0;
+}
+
+.her-world .world-intro {
+  color: #78678D;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.edit-card {
+  background: #fff;
+  border: 1px solid #E3D6F2;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 18px 0;
+  box-shadow: 0 5px 18px rgba(95, 65, 130, .07);
+}
+
+.edit-card h3 {
+  color: #8063A8;
+  font: 12px monospace;
+  letter-spacing: .12em;
+  margin: 5px 0 12px;
+}
+
+.edit-card video {
+  width: 100%;
+  display: block;
+  background: #17121D;
+  border-radius: 7px;
+  max-height: 520px;
+}
+
+.edit-note {
+  text-align: center;
+  color: #9278B2;
+  font: 10px monospace;
+  letter-spacing: .12em;
+  margin-top: 35px;
+}
+
+@media (max-width: 480px) {
+  .her-world {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 35px 15px;
+  }
+
+  .her-world h2 {
+    font-size: 36px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="noise"></div>
+
+<main class="page">
+
+<header>
+  <div class="brand">
+    <span class="mark">OS</span>
+    <span>PRIVATE SCREENING</span>
+  </div>
+  <div class="status">
+    <i></i> CLASSIFIED · FOR GINNII
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <p class="kicker">A PERSONAL MESSAGE</p>
+  <h1>OPERATION<br><em>SORRY.</em></h1>
+  <p class="tagline">MISSION: MAKE THINGS RIGHT.</p>
+  <p class="intro">One small film. One honest apology. No excuses.</p>
+
+  <button class="primary" id="enter">
+    ENTER THE MISSION <span>↗</span>
+  </button>
+
+  <div class="index">
+    CASE FILE NO. 001 <span>•</span> PERSONAL
+  </div>
+</section>
+
+<section class="content hidden" id="content">
+
+  <div class="section-head">
+    <span>01 / THE RECORDING</span>
+    <span>NOW PLAYING</span>
+  </div>
+
+  <div class="player loaded" id="player">
+    <video id="film" controls playsinline preload="metadata"
+      style="width:100%;height:auto;display:block;">
+      <source
+        src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/Snapchat-334425259-fixed.mp4"
+        type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <p class="hint">
+    YOUR VIDEO WILL PLAY HERE · UNDER 1 MINUTE
+  </p>
+
+  <div class="section-head message-head">
+    <span>02 / A MESSAGE FOR YOU</span>
+    <span>FROM ME</span>
+  </div>
+
+  <article class="letter">
+    <p class="salute">Ginnii,</p>
+
+    <p>
+      I know maine galti ki hai. Mere words galat the,
+      aur us waqt galti meri hi thi. Pata nahi maine
+      woh sab kyun kaha.
+    </p>
+
+    <p>
+      Mujhe ek baat samajh aa gayi hai ki har baar
+      har sach bolna zaroori nahi hota. Kabhi-kabhi
+      main bahut bold ho jaata hoon aur bina soche
+      kuch keh deta hoon, jo mujhe nahi karna chahiye.
+    </p>
+
+    <p>
+      Main apni is aadat par dhyan dunga aur koshish
+      karunga ki aage se aisa dobara na ho.
+    </p>
+
+    <p>I genuinely mean it when I say I'm sorry.</p>
+    <p>Please mujhe maaf kar do. 🥺❤️‍🩹</p>
+
+    <div class="signoff">— END OF MESSAGE —</div>
+  </article>
+
+  <div class="closing">
+    <span>MISSION STATUS</span>
+    <strong>THE APOLOGY HAS BEEN DELIVERED.</strong>
+  </div>
+
+  <!-- HER LITTLE WORLD -->
+
+  <section class="her-world">
+
+    <p class="world-kicker">A LITTLE COLLECTION OF HER ART</p>
+
+    <h2>Her Little World ♡</h2>
+
+    <p class="world-intro">
+      A little space for her creativity, her edits
+      and the little moments captured in them.
+    </p>
+
+    <p class="world-kicker">03 / HER EDITS</p>
+
+    <div class="edit-card">
+      <h3>EDIT 01</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_032028.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="edit-card">
+      <h3>EDIT 02</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_032545.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="edit-card">
+      <h3>EDIT 03</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_032704.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="edit-card">
+      <h3>EDIT 04</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261003_035958.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="edit-card">
+      <h3>EDIT 05</h3>
+      <video controls playsinline preload="metadata">
+        <source src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/VN20261006_143033.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <p class="edit-note">
+      MADE OF LITTLE MOMENTS & MEMORIES ♡
+    </p>
+
+  </section>
+
+</section>
+
+<footer>
+  <span>OPERATION SORRY © <span id="year"></span></span>
+  <span>MADE WITH SINCERITY.</span>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
