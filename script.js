@@ -1,3 +1,4 @@
+
 const enter = document.getElementById('enter');
 const hero = document.getElementById('hero');
 const content = document.getElementById('content');
@@ -14,3 +15,4 @@ enter.addEventListener('click', () => {
 
 document.getElementById('year').textContent =
   new Date().getFullYear();
+
