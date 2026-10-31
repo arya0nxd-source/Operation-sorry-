@@ -1,42 +1,113 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080808"><title>OPERATION SORRY</title><link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>OPERATION SORRY</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="noise"></div>
+
 <main class="page">
-<header><div class="brand"><span class="mark">OS</span><span>PRIVATE SCREENING</span></div><div class="status"><i></i> CLASSIFIED · FOR GINNII</div></header>
+
+<header>
+  <div class="brand">
+    <span class="mark">OS</span>
+    <span>PRIVATE SCREENING</span>
+  </div>
+  <div class="status">
+    <i></i> CLASSIFIED · FOR GINNII
+  </div>
+</header>
+
 <section class="hero" id="hero">
-<p class="kicker">A PERSONAL MESSAGE</p>
-<h1>OPERATION<br><em>SORRY.</em></h1>
-<p class="tagline">MISSION: MAKE THINGS RIGHT.</p>
-<p class="intro">One small film. One honest apology. No excuses.</p>
-<button class="primary" id="enter">ENTER THE MISSION <span>↗</span></button>
-<div class="index">CASE FILE NO. 001 <span>•</span> PERSONAL</div>
+  <p class="kicker">A PERSONAL MESSAGE</p>
+  <h1>OPERATION<br><em>SORRY.</em></h1>
+  <p class="tagline">MISSION: MAKE THINGS RIGHT.</p>
+  <p class="intro">One small film. One honest apology. No excuses.</p>
+
+  <button class="primary" id="enter">
+    ENTER THE MISSION <span>↗</span>
+  </button>
+
+  <div class="index">
+    CASE FILE NO. 001 <span>•</span> PERSONAL
+  </div>
 </section>
+
 <section class="content hidden" id="content">
-<div class="section-head"><span>01 / THE RECORDING</span><span>NOW PLAYING</span></div>
-<div class="player" id="player">
-<video id="film" controls playsinline preload="metadata">
-Your browser does not support video playback.
-</video>
-<div class="placeholder" id="placeholder"><div class="play-icon">▶</div><h2>Your film is waiting.</h2><p>Select your MP4 video to add it to this screening.</p><label class="upload" for="file">SELECT VIDEO <span>＋</span></label><input id="file" type="file" accept="video/mp4,video/*"></div>
-</div>
-<p class="hint">YOUR VIDEO WILL PLAY HERE · UNDER 1 MINUTE</p>
-<div class="section-head message-head"><span>02 / A MESSAGE FOR YOU</span><span>FROM ME</span></div>
-<article class="letter">
-<p class="salute">Ginnii,</p>
-<p>I know maine galti ki hai. Mere words galat the, aur us waqt galti meri hi thi. Pata nahi maine woh sab kyun kaha.</p>
-<p>Mujhe ek baat samajh aa gayi hai ki har baar har sach bolna zaroori nahi hota. Kabhi-kabhi main bahut bold ho jaata hoon aur bina soche kuch keh deta hoon, jo mujhe nahi karna chahiye.</p>
-<p>Main apni is aadat par dhyan dunga aur koshish karunga ki aage se aisa dobara na ho.</p>
-<p>I genuinely mean it when I say I'm sorry.</p>
-<p>Please mujhe maaf kar do. 🥺❤️‍🩹</p>
-<div class="signoff">— END OF MESSAGE —</div>
-</article>
-<div class="closing"><span>MISSION STATUS</span><strong>THE APOLOGY HAS BEEN DELIVERED.</strong></div>
+
+  <div class="section-head">
+    <span>01 / THE RECORDING</span>
+    <span>NOW PLAYING</span>
+  </div>
+
+  <div class="player loaded" id="player">
+    <video
+      id="film"
+      controls
+      playsinline
+      preload="metadata"
+      src="https://pub-acd5278edb664dcdba84e52e333fc111.r2.dev/Snapchat-334425259.mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <p class="hint">A PERSONAL FILM · MADE FOR YOU</p>
+
+  <div class="section-head message-head">
+    <span>02 / A MESSAGE FOR YOU</span>
+    <span>FROM ME</span>
+  </div>
+
+  <article class="letter">
+
+    <p class="salute">Ginnii,</p>
+
+    <p>
+      I know maine galti ki hai. Mere words galat the,
+      aur us waqt galti meri hi thi. Pata nahi maine
+      woh sab kyun kaha.
+    </p>
+
+    <p>
+      Mujhe ek baat samajh aa gayi hai ki har baar
+      har sach bolna zaroori nahi hota. Kabhi-kabhi
+      main bahut bold ho jaata hoon aur bina soche
+      kuch keh deta hoon, jo mujhe nahi karna chahiye.
+    </p>
+
+    <p>
+      Main apni is aadat par dhyan dunga aur koshish
+      karunga ki aage se aisa dobara na ho.
+    </p>
+
+    <p>I genuinely mean it when I say I'm sorry.</p>
+
+    <p>Please mujhe maaf kar do. 🥺❤️‍🩹</p>
+
+    <div class="signoff">— END OF MESSAGE —</div>
+
+  </article>
+
+  <div class="closing">
+    <span>MISSION STATUS</span>
+    <strong>THE APOLOGY HAS BEEN DELIVERED.</strong>
+  </div>
+
 </section>
-<footer><span>OPERATION SORRY © <span id="year"></span></span><span>MADE WITH SINCERITY.</span></footer>
-</main><script src="script.js"></script>
-</body></html>
+
+<footer>
+  <span>OPERATION SORRY © <span id="year"></span></span>
+  <span>MADE WITH SINCERITY.</span>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
